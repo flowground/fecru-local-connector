@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "action": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

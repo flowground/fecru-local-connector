@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "required": false,
+            "type": "string"
+        },
+        "key": {
+            "required": false,
+            "type": "string"
+        },
+        "defaultRepositoryName": {
+            "required": false,
+            "type": "string"
+        },
+        "permissionSchemeName": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

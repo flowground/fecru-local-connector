@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "copyFrom": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

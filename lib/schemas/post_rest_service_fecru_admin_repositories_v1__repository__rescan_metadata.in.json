@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "properties": {
+        "from": {
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+        },
+        "to": {
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "property": {
+            "required": true,
+            "type": "string"
+        },
+        "repository": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

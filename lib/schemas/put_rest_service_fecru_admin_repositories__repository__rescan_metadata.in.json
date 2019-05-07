@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "from": {
+            "required": false,
+            "type": "string"
+        },
+        "to": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

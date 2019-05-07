@@ -1,0 +1,1952 @@
+{
+    "title": "Fisheye Crucible",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/fecru.local/1.0.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "http://fecru.local/context/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_rest_service_fecru_admin_groups_": {
+            "main": "./lib/actions/get_rest_service_fecru_admin_groups_.js",
+            "title": "Retrieve a page of groups.",
+            "description": "Retrieve a page of groups.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_rest_service_fecru_admin_groups_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_rest_service_fecru_admin_groups_": {
+            "main": "./lib/actions/post_rest_service_fecru_admin_groups_.js",
+            "title": "Creates a new user group.",
+            "description": "Creates a new user group.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_rest_service_fecru_admin_groups_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_rest_service_fecru_admin_groups__name_": {
+            "main": "./lib/actions/delete_rest_service_fecru_admin_groups__name_.js",
+            "title": "Deletes a group by name",
+            "description": "Deletes a group by name",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_rest_service_fecru_admin_groups__name_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_rest_service_fecru_admin_groups__name_": {
+            "main": "./lib/actions/get_rest_service_fecru_admin_groups__name_.js",
+            "title": "Retrieve a group by name.",
+            "description": "Retrieve a group by name.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_rest_service_fecru_admin_groups__name_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_rest_service_fecru_admin_groups__name_": {
+            "main": "./lib/actions/put_rest_service_fecru_admin_groups__name_.js",
+            "title": "Updates an existing group.",
+            "description": "Updates an existing group.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_rest_service_fecru_admin_groups__name_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_rest_service_fecru_admin_groups__name__users": {
+            "main": "./lib/actions/delete_rest_service_fecru_admin_groups__name__users.js",
+            "title": "Removes user from group",
+            "description": "Removes user from group",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_rest_service_fecru_admin_groups__name__users.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listGroupUsers": {
+            "main": "./lib/actions/listGroupUsers.js",
+            "title": "Lists group's user names",
+            "description": "Lists group's user names",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listGroupUsers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_rest_service_fecru_admin_groups__name__users": {
+            "main": "./lib/actions/put_rest_service_fecru_admin_groups__name__users.js",
+            "title": "Adds user to group",
+            "description": "Adds user to group",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_rest_service_fecru_admin_groups__name__users.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_rest_service_fecru_admin_permission_schemes": {
+            "main": "./lib/actions/get_rest_service_fecru_admin_permission_schemes.js",
+            "title": "Retrieve a page of permission schemes.",
+            "description": "Retrieve a page of permission schemes.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_rest_service_fecru_admin_permission_schemes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_rest_service_fecru_admin_permission_schemes": {
+            "main": "./lib/actions/post_rest_service_fecru_admin_permission_schemes.js",
+            "title": "Creates a new permission scheme. The new permission scheme is blank or can be created from another existing permission scheme.",
+            "description": "Creates a new permission scheme. The new permission scheme is blank or can be created from another existing permission scheme.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_rest_service_fecru_admin_permission_schemes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_rest_service_fecru_admin_permission_schemes__name_": {
+            "main": "./lib/actions/delete_rest_service_fecru_admin_permission_schemes__name_.js",
+            "title": "Deletes a permission scheme by name",
+            "description": "Deletes a permission scheme by name",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_rest_service_fecru_admin_permission_schemes__name_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_rest_service_fecru_admin_permission_schemes__name_": {
+            "main": "./lib/actions/get_rest_service_fecru_admin_permission_schemes__name_.js",
+            "title": "Retrieve a permission scheme by name",
+            "description": "Retrieve a permission scheme by name",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_rest_service_fecru_admin_permission_schemes__name_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_rest_service_fecru_admin_permission_schemes__name_": {
+            "main": "./lib/actions/put_rest_service_fecru_admin_permission_schemes__name_.js",
+            "title": "Updates an existing permission scheme.",
+            "description": "Updates an existing permission scheme.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_rest_service_fecru_admin_permission_schemes__name_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deletePermissionSchemeAnonymousUsers": {
+            "main": "./lib/actions/deletePermissionSchemeAnonymousUsers.js",
+            "title": "Removes anonymous-user permission [action name] from given permission scheme",
+            "description": "Removes anonymous-user permission [action name] from given permission scheme",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deletePermissionSchemeAnonymousUsers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listAnonymousUsersPrincipalAssociation": {
+            "main": "./lib/actions/listAnonymousUsersPrincipalAssociation.js",
+            "title": "Retrieve a page of anonymous users permissions [action name] for given permission scheme.",
+            "description": "Retrieve a page of anonymous users permissions [action name] for given permission scheme.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listAnonymousUsersPrincipalAssociation.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "addPermissionSchemeAnonymousUsers": {
+            "main": "./lib/actions/addPermissionSchemeAnonymousUsers.js",
+            "title": "Add anonymous-user permission [action name] to given permission scheme\n List of available action names:",
+            "description": "Add anonymous-user permission [action name] to given permission scheme\n List of available action names:",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/addPermissionSchemeAnonymousUsers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deletePermissionSchemeGroup": {
+            "main": "./lib/actions/deletePermissionSchemeGroup.js",
+            "title": "Removes group permission [group name, action name] from given permission scheme",
+            "description": "Removes group permission [group name, action name] from given permission scheme",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deletePermissionSchemeGroup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listGroupPrincipalAssociation": {
+            "main": "./lib/actions/listGroupPrincipalAssociation.js",
+            "title": "Retrieve a page of group permissions [group name, action name] for given permission scheme.",
+            "description": "Retrieve a page of group permissions [group name, action name] for given permission scheme.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listGroupPrincipalAssociation.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "addPermissionSchemeGroup": {
+            "main": "./lib/actions/addPermissionSchemeGroup.js",
+            "title": "Add group permission [group name, action name] to given permission scheme\n List of available action names:",
+            "description": "Add group permission [group name, action name] to given permission scheme\n List of available action names:",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/addPermissionSchemeGroup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deletePermissionSchemeLoggedUsers": {
+            "main": "./lib/actions/deletePermissionSchemeLoggedUsers.js",
+            "title": "Removes logged-in-users permission [action name] from given permission scheme",
+            "description": "Removes logged-in-users permission [action name] from given permission scheme",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deletePermissionSchemeLoggedUsers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listLoggedUsersPrincipalAssociation": {
+            "main": "./lib/actions/listLoggedUsersPrincipalAssociation.js",
+            "title": "Retrieve a page of logged in users permissions [action name] for given permission scheme.",
+            "description": "Retrieve a page of logged in users permissions [action name] for given permission scheme.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listLoggedUsersPrincipalAssociation.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "addPermissionSchemeLoggedUsers": {
+            "main": "./lib/actions/addPermissionSchemeLoggedUsers.js",
+            "title": "Add logged-in-users permission [action name] to given permission scheme\n List of available action names:",
+            "description": "Add logged-in-users permission [action name] to given permission scheme\n List of available action names:",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/addPermissionSchemeLoggedUsers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listProjects": {
+            "main": "./lib/actions/listProjects.js",
+            "title": "Retrieve a page of projects for given permission scheme.",
+            "description": "Retrieve a page of projects for given permission scheme.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listProjects.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deletePermissionSchemeRole": {
+            "main": "./lib/actions/deletePermissionSchemeRole.js",
+            "title": "Removes review-role permission [role name, action name] from given permission scheme",
+            "description": "Removes review-role permission [role name, action name] from given permission scheme",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deletePermissionSchemeRole.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listRolesPrincipalAssociation": {
+            "main": "./lib/actions/listRolesPrincipalAssociation.js",
+            "title": "Retrieve a page of review-roles permissions [role name, action name] for given permission scheme.",
+            "description": "Retrieve a page of review-roles permissions [role name, action name] for given permission scheme.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listRolesPrincipalAssociation.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "addPermissionSchemeReviewRole": {
+            "main": "./lib/actions/addPermissionSchemeReviewRole.js",
+            "title": "Add review-role permission [role name, action name] to given permission scheme\n List of available action names:\n \n\n List of available role names:",
+            "description": "Add review-role permission [role name, action name] to given permission scheme\n List of available action names:\n \n\n List of available role names:",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/addPermissionSchemeReviewRole.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deletePermissionSchemeUser": {
+            "main": "./lib/actions/deletePermissionSchemeUser.js",
+            "title": "Removes user permission [username, action name] from given permission scheme",
+            "description": "Removes user permission [username, action name] from given permission scheme",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deletePermissionSchemeUser.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listUserPrincipalAssociation": {
+            "main": "./lib/actions/listUserPrincipalAssociation.js",
+            "title": "Retrieve a page of user permissions [username, action name] for given permission scheme.",
+            "description": "Retrieve a page of user permissions [username, action name] for given permission scheme.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listUserPrincipalAssociation.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "addPermissionSchemeUser": {
+            "main": "./lib/actions/addPermissionSchemeUser.js",
+            "title": "Add user permission [username, action name] to given permission scheme\n List of available action names:",
+            "description": "Add user permission [username, action name] to given permission scheme\n List of available action names:",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/addPermissionSchemeUser.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_rest_service_fecru_admin_projects": {
+            "main": "./lib/actions/get_rest_service_fecru_admin_projects.js",
+            "title": "Retrieve a page of projects.",
+            "description": "Retrieve a page of projects.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_rest_service_fecru_admin_projects.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_rest_service_fecru_admin_projects": {
+            "main": "./lib/actions/post_rest_service_fecru_admin_projects.js",
+            "title": "Creates a new project.",
+            "description": "Creates a new project.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_rest_service_fecru_admin_projects.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_rest_service_fecru_admin_projects__key_": {
+            "main": "./lib/actions/delete_rest_service_fecru_admin_projects__key_.js",
+            "title": "Deletes a project by key (including all reviews in this project).\n Use \n to move reviews to another project.",
+            "description": "Deletes a project by key (including all reviews in this project).\n Use \n to move reviews to another project.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_rest_service_fecru_admin_projects__key_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_rest_service_fecru_admin_projects__key_": {
+            "main": "./lib/actions/get_rest_service_fecru_admin_projects__key_.js",
+            "title": "Retrieve a project by key.",
+            "description": "Retrieve a project by key.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_rest_service_fecru_admin_projects__key_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_rest_service_fecru_admin_projects__key_": {
+            "main": "./lib/actions/put_rest_service_fecru_admin_projects__key_.js",
+            "title": "Updates an existing project.",
+            "description": "Updates an existing project.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_rest_service_fecru_admin_projects__key_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteAllowedReviewerGroup": {
+            "main": "./lib/actions/deleteAllowedReviewerGroup.js",
+            "title": "Delete group from project's allowed reviewer group list",
+            "description": "Delete group from project's allowed reviewer group list",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteAllowedReviewerGroup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "allowedReviewerGroups": {
+            "main": "./lib/actions/allowedReviewerGroups.js",
+            "title": "Retrieves project's allowed reviewer groups",
+            "description": "Retrieves project's allowed reviewer groups",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/allowedReviewerGroups.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "addAllowedReviewerGroup": {
+            "main": "./lib/actions/addAllowedReviewerGroup.js",
+            "title": "Add group to project's allowed reviewer group list",
+            "description": "Add group to project's allowed reviewer group list",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/addAllowedReviewerGroup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteAllowedReviewerUser": {
+            "main": "./lib/actions/deleteAllowedReviewerUser.js",
+            "title": "Remove user from project's allowed reviewer users list",
+            "description": "Remove user from project's allowed reviewer users list",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteAllowedReviewerUser.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "allowedReviewerUsers": {
+            "main": "./lib/actions/allowedReviewerUsers.js",
+            "title": "Retrieves project's allowed reviewer users",
+            "description": "Retrieves project's allowed reviewer users",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/allowedReviewerUsers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "addAllowedReviewerUser": {
+            "main": "./lib/actions/addAllowedReviewerUser.js",
+            "title": "Add user to project's allowed reviewer users list",
+            "description": "Add user to project's allowed reviewer users list",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/addAllowedReviewerUser.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteDefaultReviewerGroup": {
+            "main": "./lib/actions/deleteDefaultReviewerGroup.js",
+            "title": "Delete group from project's default reviewer group list",
+            "description": "Delete group from project's default reviewer group list",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteDefaultReviewerGroup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "defaultReviewerGroups": {
+            "main": "./lib/actions/defaultReviewerGroups.js",
+            "title": "Retrieves project's default reviewer groups",
+            "description": "Retrieves project's default reviewer groups",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/defaultReviewerGroups.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "addDefaultReviewerGroup": {
+            "main": "./lib/actions/addDefaultReviewerGroup.js",
+            "title": "Add group to project's default reviewer group list",
+            "description": "Add group to project's default reviewer group list",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/addDefaultReviewerGroup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteDefaultReviewerUser": {
+            "main": "./lib/actions/deleteDefaultReviewerUser.js",
+            "title": "Remove user from project's default reviewer users list",
+            "description": "Remove user from project's default reviewer users list",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteDefaultReviewerUser.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listDefaultReviewerUsers": {
+            "main": "./lib/actions/listDefaultReviewerUsers.js",
+            "title": "Retrieves project's default reviewer users",
+            "description": "Retrieves project's default reviewer users",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listDefaultReviewerUsers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "addDefaultReviewerUser": {
+            "main": "./lib/actions/addDefaultReviewerUser.js",
+            "title": "Add user to project's default reviewer users list",
+            "description": "Add user to project's default reviewer users list",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/addDefaultReviewerUser.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "moveAllReviews": {
+            "main": "./lib/actions/moveAllReviews.js",
+            "title": "Move reviews and snippets from source project to destination project",
+            "description": "Move reviews and snippets from source project to destination project",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/moveAllReviews.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_rest_service_fecru_admin_repositories": {
+            "main": "./lib/actions/get_rest_service_fecru_admin_repositories.js",
+            "title": "Retrieve a page of repositories. Repository properties with default values may not be returned.",
+            "description": "Retrieve a page of repositories. Repository properties with default values may not be returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_rest_service_fecru_admin_repositories.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_rest_service_fecru_admin_repositories": {
+            "main": "./lib/actions/post_rest_service_fecru_admin_repositories.js",
+            "title": "Creates a repository.",
+            "description": "Creates a repository.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_rest_service_fecru_admin_repositories.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "addRepository": {
+            "main": "./lib/actions/addRepository.js",
+            "title": "Adds repository",
+            "description": "Adds repository",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/addRepository.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_rest_service_fecru_admin_repositories_v1__repository_": {
+            "main": "./lib/actions/get_rest_service_fecru_admin_repositories_v1__repository_.js",
+            "title": "Returns information about the status of the repository and the current indexing status",
+            "description": "Returns information about the status of the repository and the current indexing status",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_rest_service_fecru_admin_repositories_v1__repository_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteRepository": {
+            "main": "./lib/actions/deleteRepository.js",
+            "title": "Deletes repository.\n Warning: you can not undo this operation",
+            "description": "Deletes repository.\n Warning: you can not undo this operation",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteRepository.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "disableRepository": {
+            "main": "./lib/actions/disableRepository.js",
+            "title": "Disables repository.",
+            "description": "Disables repository.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/disableRepository.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "enableRepository": {
+            "main": "./lib/actions/enableRepository.js",
+            "title": "Enables repository.",
+            "description": "Enables repository.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/enableRepository.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "reindexChangesetComments": {
+            "main": "./lib/actions/reindexChangesetComments.js",
+            "title": "Rebuilds the changeset discussion index for the specified repository. The index is used to display changeset\n discussions in activity streams.",
+            "description": "Rebuilds the changeset discussion index for the specified repository. The index is used to display changeset\n discussions in activity streams.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/reindexChangesetComments.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_rest_service_fecru_admin_repositories_v1__repository__reindex_linecount": {
+            "main": "./lib/actions/post_rest_service_fecru_admin_repositories_v1__repository__reindex_linecount.js",
+            "title": "Re-indexes the linecount data used to generate the LOC graphs. The linecount data will be recalculated in daily\n buckets based on the server timezone.",
+            "description": "Re-indexes the linecount data used to generate the LOC graphs. The linecount data will be recalculated in daily\n buckets based on the server timezone.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_rest_service_fecru_admin_repositories_v1__repository__reindex_linecount.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "doReviewRevisionReindex": {
+            "main": "./lib/actions/doReviewRevisionReindex.js",
+            "title": "Re-indexes all the Crucible revision data (which revisions have been reviewed)",
+            "description": "Re-indexes all the Crucible revision data (which revisions have been reviewed)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/doReviewRevisionReindex.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "rebuildSearchIndex": {
+            "main": "./lib/actions/rebuildSearchIndex.js",
+            "title": "Rebuilds the search index data for the given repository. This will rebuild the data used to search by path,\n commit message and comitter, also used for activity streams and JIRA integration.",
+            "description": "Rebuilds the search index data for the given repository. This will rebuild the data used to search by path,\n commit message and comitter, also used for activity streams and JIRA integration.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/rebuildSearchIndex.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_rest_service_fecru_admin_repositories_v1__repository__reindex_source": {
+            "main": "./lib/actions/post_rest_service_fecru_admin_repositories_v1__repository__reindex_source.js",
+            "title": "Deletes the existing cache and re-indexes the repository from scratch.\n For large or slow repositories this may take some time, during which some functionality will be unavailable.\n This action will also restart the repository.",
+            "description": "Deletes the existing cache and re-indexes the repository from scratch.\n For large or slow repositories this may take some time, during which some functionality will be unavailable.\n This action will also restart the repository.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_rest_service_fecru_admin_repositories_v1__repository__reindex_source.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_rest_service_fecru_admin_repositories_v1__repository__rescan_metadata": {
+            "main": "./lib/actions/post_rest_service_fecru_admin_repositories_v1__repository__rescan_metadata.js",
+            "title": "Re-scans the repository metadata for SVN and Perforce repositories. Only valid for Perforce and SVN repositories.",
+            "description": "Re-scans the repository metadata for SVN and Perforce repositories. Only valid for Perforce and SVN repositories.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_rest_service_fecru_admin_repositories_v1__repository__rescan_metadata.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "scan": {
+            "main": "./lib/actions/scan.js",
+            "title": "Runs an incremental repository index now.  This is the same operation as triggered by scheduled indexing.\n Can be called using the REST Api Token to authorize.",
+            "description": "Runs an incremental repository index now.  This is the same operation as triggered by scheduled indexing.\n Can be called using the REST Api Token to authorize.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/scan.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "scanCvs": {
+            "main": "./lib/actions/scanCvs.js",
+            "title": "Scans the whole CVS repository for any changes since the last scan. Only valid for CVS repositories.",
+            "description": "Scans the whole CVS repository for any changes since the last scan. Only valid for CVS repositories.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/scanCvs.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "startRepository": {
+            "main": "./lib/actions/startRepository.js",
+            "title": "Starts the repository.",
+            "description": "Starts the repository.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/startRepository.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "stopRepository": {
+            "main": "./lib/actions/stopRepository.js",
+            "title": "Stops the repository. Does not wait for the repository to stop before returning.",
+            "description": "Stops the repository. Does not wait for the repository to stop before returning.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/stopRepository.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_rest_service_fecru_admin_repositories__repository_": {
+            "main": "./lib/actions/delete_rest_service_fecru_admin_repositories__repository_.js",
+            "title": "Deletes a repository by key",
+            "description": "Deletes a repository by key",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_rest_service_fecru_admin_repositories__repository_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_rest_service_fecru_admin_repositories__repository_": {
+            "main": "./lib/actions/get_rest_service_fecru_admin_repositories__repository_.js",
+            "title": "Retrieve a repository by key. Repository properties with default values may not be returned.",
+            "description": "Retrieve a repository by key. Repository properties with default values may not be returned.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_rest_service_fecru_admin_repositories__repository_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_rest_service_fecru_admin_repositories__repository_": {
+            "main": "./lib/actions/put_rest_service_fecru_admin_repositories__repository_.js",
+            "title": "Updates an existing repository.",
+            "description": "Updates an existing repository.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_rest_service_fecru_admin_repositories__repository_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "fullIncrementalIndex": {
+            "main": "./lib/actions/fullIncrementalIndex.js",
+            "title": "Runs an full incremental repository index.\n For CVS: scans the whole CVS repository for any changes since the last scan.\n For other repository types will trigger an incremental index.",
+            "description": "Runs an full incremental repository index.\n For CVS: scans the whole CVS repository for any changes since the last scan.\n For other repository types will trigger an incremental index.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/fullIncrementalIndex.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "incrementalIndex": {
+            "main": "./lib/actions/incrementalIndex.js",
+            "title": "Runs an incremental repository index.  This is the same operation as triggered by scheduled indexing.\n Can be called using the REST API Token to authorize.",
+            "description": "Runs an incremental repository index.  This is the same operation as triggered by scheduled indexing.\n Can be called using the REST API Token to authorize.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/incrementalIndex.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "permissions": {
+            "main": "./lib/actions/permissions.js",
+            "title": "Retrieve repository permissions properties.",
+            "description": "Retrieve repository permissions properties.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/permissions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "updatePermissions": {
+            "main": "./lib/actions/updatePermissions.js",
+            "title": "Updates repository permissions properties.\n\n Valid permission settings: any combination of useDefaults, allowAnonymous, allowLoggedIn.",
+            "description": "Updates repository permissions properties.\n\n Valid permission settings: any combination of useDefaults, allowAnonymous, allowLoggedIn.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/updatePermissions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "removeGroupToPermissions": {
+            "main": "./lib/actions/removeGroupToPermissions.js",
+            "title": "Delete group from repository allowed groups",
+            "description": "Delete group from repository allowed groups",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/removeGroupToPermissions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "permissionsGroups": {
+            "main": "./lib/actions/permissionsGroups.js",
+            "title": "Note: use /rest-service-fecru/admin/repository-permissions/ endpoint for full repository permission administration functionality\n Lists groups allowed to access repository.",
+            "description": "Note: use /rest-service-fecru/admin/repository-permissions/ endpoint for full repository permission administration functionality\n Lists groups allowed to access repository.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/permissionsGroups.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "addGroupToPermissions": {
+            "main": "./lib/actions/addGroupToPermissions.js",
+            "title": "Note: use /rest-service-fecru/admin/repository-permissions/ endpoint for full repository permission administration functionality\n Adds group to repository allowed groups",
+            "description": "Note: use /rest-service-fecru/admin/repository-permissions/ endpoint for full repository permission administration functionality\n Adds group to repository allowed groups",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/addGroupToPermissions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "reindexChangesetDiscussion": {
+            "main": "./lib/actions/reindexChangesetDiscussion.js",
+            "title": "Rebuilds the changeset discussion index for the specified repository. The index is used to display changeset\n discussions in activity streams.",
+            "description": "Rebuilds the changeset discussion index for the specified repository. The index is used to display changeset\n discussions in activity streams.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/reindexChangesetDiscussion.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_rest_service_fecru_admin_repositories__repository__reindex_linecount": {
+            "main": "./lib/actions/put_rest_service_fecru_admin_repositories__repository__reindex_linecount.js",
+            "title": "Re-indexes the linecount data used to generate the LOC graphs. The linecount data will be recalculated in daily\n buckets based on the server timezone.",
+            "description": "Re-indexes the linecount data used to generate the LOC graphs. The linecount data will be recalculated in daily\n buckets based on the server timezone.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_rest_service_fecru_admin_repositories__repository__reindex_linecount.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "reindexReviews": {
+            "main": "./lib/actions/reindexReviews.js",
+            "title": "Re-indexes all the Crucible revision data (which revisions have been reviewed)",
+            "description": "Re-indexes all the Crucible revision data (which revisions have been reviewed)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/reindexReviews.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "reindexSearch": {
+            "main": "./lib/actions/reindexSearch.js",
+            "title": "Rebuilds the search index data for the given repository. This will rebuild the data used to search by path,\n commit message and committer, also used for activity streams and JIRA integration.",
+            "description": "Rebuilds the search index data for the given repository. This will rebuild the data used to search by path,\n commit message and committer, also used for activity streams and JIRA integration.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/reindexSearch.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_rest_service_fecru_admin_repositories__repository__reindex_source": {
+            "main": "./lib/actions/put_rest_service_fecru_admin_repositories__repository__reindex_source.js",
+            "title": "Deletes the existing cache and re-indexes the repository from scratch.\n For large or slow repositories this may take some time, during which some functionality will be unavailable.\n This action will also restart the repository.",
+            "description": "Deletes the existing cache and re-indexes the repository from scratch.\n For large or slow repositories this may take some time, during which some functionality will be unavailable.\n This action will also restart the repository.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_rest_service_fecru_admin_repositories__repository__reindex_source.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_rest_service_fecru_admin_repositories__repository__rescan_metadata": {
+            "main": "./lib/actions/put_rest_service_fecru_admin_repositories__repository__rescan_metadata.js",
+            "title": "Re-scans the repository metadata. Only valid for Perforce and SVN repositories.",
+            "description": "Re-scans the repository metadata. Only valid for Perforce and SVN repositories.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_rest_service_fecru_admin_repositories__repository__rescan_metadata.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "start": {
+            "main": "./lib/actions/start.js",
+            "title": "Starts repository. Does not wait for the repository to start before returning.",
+            "description": "Starts repository. Does not wait for the repository to start before returning.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/start.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "stop": {
+            "main": "./lib/actions/stop.js",
+            "title": "Stops repository. Does not wait for the repository to stop before returning.",
+            "description": "Stops repository. Does not wait for the repository to stop before returning.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/stop.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "repositoryUpdates": {
+            "main": "./lib/actions/repositoryUpdates.js",
+            "title": "Retrieves repository updates properties.",
+            "description": "Retrieves repository updates properties.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/repositoryUpdates.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "updateRepositoryUpdates": {
+            "main": "./lib/actions/updateRepositoryUpdates.js",
+            "title": "updateRepositoryUpdates",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateRepositoryUpdates.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "defaultPermissions": {
+            "main": "./lib/actions/defaultPermissions.js",
+            "title": "Retrieve default repository permissions properties.",
+            "description": "Retrieve default repository permissions properties.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/defaultPermissions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "updateDefaultPermissions": {
+            "main": "./lib/actions/updateDefaultPermissions.js",
+            "title": "Updates default repository permissions properties.\n\n Valid permission settings: any combination of allowAnonymous, allowLoggedIn",
+            "description": "Updates default repository permissions properties.\n\n Valid permission settings: any combination of allowAnonymous, allowLoggedIn",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateDefaultPermissions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_rest_service_fecru_admin_users_": {
+            "main": "./lib/actions/get_rest_service_fecru_admin_users_.js",
+            "title": "Retrieve a page of users.",
+            "description": "Retrieve a page of users.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_rest_service_fecru_admin_users_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_rest_service_fecru_admin_users_": {
+            "main": "./lib/actions/post_rest_service_fecru_admin_users_.js",
+            "title": "Creates a new user. Tries to add the user to fisheye-users and crucible-users groups if those exist.",
+            "description": "Creates a new user. Tries to add the user to fisheye-users and crucible-users groups if those exist.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_rest_service_fecru_admin_users_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_rest_service_fecru_admin_users__name_": {
+            "main": "./lib/actions/delete_rest_service_fecru_admin_users__name_.js",
+            "title": "Deletes a user by name",
+            "description": "Deletes a user by name",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_rest_service_fecru_admin_users__name_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_rest_service_fecru_admin_users__name_": {
+            "main": "./lib/actions/get_rest_service_fecru_admin_users__name_.js",
+            "title": "Retrieve a user by name.",
+            "description": "Retrieve a user by name.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_rest_service_fecru_admin_users__name_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_rest_service_fecru_admin_users__name_": {
+            "main": "./lib/actions/put_rest_service_fecru_admin_users__name_.js",
+            "title": "Updates an existing user.",
+            "description": "Updates an existing user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_rest_service_fecru_admin_users__name_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_rest_service_fecru_admin_users__name__groups": {
+            "main": "./lib/actions/delete_rest_service_fecru_admin_users__name__groups.js",
+            "title": "Removes user from group",
+            "description": "Removes user from group",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_rest_service_fecru_admin_users__name__groups.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listUserGroups": {
+            "main": "./lib/actions/listUserGroups.js",
+            "title": "Lists user's group names",
+            "description": "Lists user's group names",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listUserGroups.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_rest_service_fecru_admin_users__name__groups": {
+            "main": "./lib/actions/put_rest_service_fecru_admin_users__name__groups.js",
+            "title": "Adds user to group",
+            "description": "Adds user to group",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_rest_service_fecru_admin_users__name__groups.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "login": {
+            "main": "./lib/actions/login.js",
+            "title": "Get the user authentication token.",
+            "description": "Get the user authentication token.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/login.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_rest_service_fecru_indexing_status_v1_status__repository_": {
+            "main": "./lib/actions/get_rest_service_fecru_indexing_status_v1_status__repository_.js",
+            "title": "Returns indexing status of given repository.",
+            "description": "Returns indexing status of given repository.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_rest_service_fecru_indexing_status_v1_status__repository_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRecent": {
+            "main": "./lib/actions/getRecent.js",
+            "title": "Get a list of recently visited items for the currently logged in user.",
+            "description": "Get a list of recently visited items for the currently logged in user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRecent.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRecentDetailed": {
+            "main": "./lib/actions/getRecentDetailed.js",
+            "title": "Get a list of recently visisted items for the currently logged in user, including the detailed entities.",
+            "description": "Get a list of recently visisted items for the currently logged in user, including the detailed entities.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRecentDetailed.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRecentProjects": {
+            "main": "./lib/actions/getRecentProjects.js",
+            "title": "Get a list of recently visited projects for the currently logged in user.",
+            "description": "Get a list of recently visited projects for the currently logged in user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRecentProjects.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRecentProjectsDetailed": {
+            "main": "./lib/actions/getRecentProjectsDetailed.js",
+            "title": "Get a list of recently visited projects for the currently logged in Project, including the detailed entities.",
+            "description": "Get a list of recently visited projects for the currently logged in Project, including the detailed entities.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRecentProjectsDetailed.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRecentRepositories": {
+            "main": "./lib/actions/getRecentRepositories.js",
+            "title": "Get a list of recently visited repositories for the currently logged in user.",
+            "description": "Get a list of recently visited repositories for the currently logged in user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRecentRepositories.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRecentRepositoriesDetailed": {
+            "main": "./lib/actions/getRecentRepositoriesDetailed.js",
+            "title": "Get a list of recently visisted repositories for the currently logged in user, including the detailed entities.",
+            "description": "Get a list of recently visisted repositories for the currently logged in user, including the detailed entities.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRecentRepositoriesDetailed.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRecentReviews": {
+            "main": "./lib/actions/getRecentReviews.js",
+            "title": "Get a list of recently visited reviews for the currently logged in user.",
+            "description": "Get a list of recently visited reviews for the currently logged in user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRecentReviews.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRecentReviewsDetailed": {
+            "main": "./lib/actions/getRecentReviewsDetailed.js",
+            "title": "Get a list of recently visited reviews for the currently logged in user, including the detailed entities.",
+            "description": "Get a list of recently visited reviews for the currently logged in user, including the detailed entities.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRecentReviewsDetailed.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRecentSnippets": {
+            "main": "./lib/actions/getRecentSnippets.js",
+            "title": "Get a list of recently visited snippets for the currently logged in user.",
+            "description": "Get a list of recently visited snippets for the currently logged in user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRecentSnippets.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRecentSnippetsDetailed": {
+            "main": "./lib/actions/getRecentSnippetsDetailed.js",
+            "title": "Get a list of recently visited snippets for the currently logged in user, including the detailed entities.",
+            "description": "Get a list of recently visited snippets for the currently logged in user, including the detailed entities.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRecentSnippetsDetailed.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRecentUsers": {
+            "main": "./lib/actions/getRecentUsers.js",
+            "title": "Get a list of recently visited users for the currently logged in user.",
+            "description": "Get a list of recently visited users for the currently logged in user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRecentUsers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRecentUsersDetailed": {
+            "main": "./lib/actions/getRecentUsersDetailed.js",
+            "title": "Get a list of recently visited users for the currently logged in user, including the detailed entities.",
+            "description": "Get a list of recently visited users for the currently logged in user, including the detailed entities.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRecentUsersDetailed.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getInfo": {
+            "main": "./lib/actions/getInfo.js",
+            "title": "Provides general information about the server's configuration.",
+            "description": "Provides general information about the server's configuration.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "doShareContent": {
+            "main": "./lib/actions/doShareContent.js",
+            "title": "doShareContent",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/doShareContent.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "setPref": {
+            "main": "./lib/actions/setPref.js",
+            "title": "Using POST method to set a user preference.\n If repo is not set, the preference will be recognised as a global preference.",
+            "description": "Using POST method to set a user preference.\n If repo is not set, the preference will be recognised as a global preference.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/setPref.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getGlobalPref": {
+            "main": "./lib/actions/getGlobalPref.js",
+            "title": "Getting user's global preference",
+            "description": "Getting user's global preference",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getGlobalPref.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRepoPref": {
+            "main": "./lib/actions/getRepoPref.js",
+            "title": "Getting user's preference related to a certain repository",
+            "description": "Getting user's preference related to a certain repository",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRepoPref.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "sourceProjectKey": {
+            "required": true,
+            "type": "string"
+        },
+        "destinationProjectKey": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

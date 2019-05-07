@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "type": {
+            "required": false,
+            "type": "string"
+        },
+        "enabled": {
+            "required": false,
+            "type": "boolean"
+        },
+        "started": {
+            "required": false,
+            "type": "boolean"
+        }
+    }
+}
